@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestions des photos de chatons{% endblock %}
+
+{% block body %}
+    <h1>Supprimer une Catégorie</h1>
+
+    {{ form(formulaire_suppr) }}
+
+    {#    <button type="button" class="btn btn-primary"><a href="#" style="color: white; text-decoration: none">Ajouter</a></button>#}
+    <button type="button" class="btn btn-secondary"><a href="{{ path("app_home") }}" style="color: white; text-decoration: none">Retour</a></button>
+
+{% endblock %}

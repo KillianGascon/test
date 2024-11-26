@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestions des photos de chatons{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue</h1>
+    <table style="border: 1px solid; border-color: #2e3136 ">
+        <tr style="border: 1px solid; border-color: #2e3136">
+            <th style="border: 1px solid; border-color: #2e3136">Titre</th>
+            <th style="border: 1px solid; border-color: #2e3136">description</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for c in categories %}
+            <tr>
+                <td style="border: 1px solid; border-color: #2e3136">{{ c.Titre }}</td>
+                <td style="border: 1px solid; border-color: #2e3136">{{ c.Description }}</td>
+                <td>
+                    <a href="{{ path("app_modifier_categorie", {'id': c.id}) }}" class = "btn btn-primary">
+                        Modifier
+                    </a>
+                    <a href="{{ path("app_supprimer_categorie", {'id': c.id}) }}" class = "btn btn-danger">
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+
+    </table>
+    <h2>Ajouter une Catégorie :</h2>
+
+    <button type="button" class="btn btn-primary" ><a href="{{ path("app_ajouter_categorie") }}" style="color: white; text-decoration: none">Ajouter</a></button>
+
+{% endblock %}
