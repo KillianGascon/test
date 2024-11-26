@@ -1,0 +1,8 @@
+<div class="col col-2">
+    <div class="card h-75">
+        <img style="height: 80%" class="card-img-top" src="{{ asset("/photos/" ~ nom_dossier|url_encode ~ "/" ~ p.filename|url_encode) }}" alt="Card image">
+        <div style="height: 20%" class="card-body">
+            <p class="card-text">{{ p.filename }}</p>
+        </div>
+    </div>
+</div>

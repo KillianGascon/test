@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatons du dossier {{ nom_dossier }}{% endblock %}
+
+{% block body %}
+    <ul>
+        <h1>Chatons du dossier {{ nom_dossier }}</h1>
+        <div class="row">
+            {% for p in photos %}
+                {% include "home/_chatons.html.twig" %}
+            {% endfor %}
+        </div>
+    </ul>
+    <h2>Ajouter une image</h2>
+    {{ form(formulaire_chaton) }}
+{% endblock %}
