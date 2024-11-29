@@ -22,6 +22,9 @@
                     <a href="{{ path("app_supprimer_categorie", {'id': c.id}) }}" class = "btn btn-danger">
                         Supprimer
                     </a>
+                    <a href="{{ path("app_chaton_by_categorie", {'id': c.id}) }}" class="btn btn-secondary">
+                        Voir chatons
+                    </a>
                 </td>
             </tr>
         {% endfor %}
@@ -32,5 +35,6 @@
     <h2>Ajouter une Catégorie :</h2>
 
     <button type="button" class="btn btn-primary" ><a href="{{ path("app_ajouter_categorie") }}" style="color: white; text-decoration: none">Ajouter</a></button>
+{#    <button type="button" class="btn btn-primary" ><a href="{{ path("app_chaton_index") }}" style="color: white; text-decoration: none">Chatons</a></button>#}
 
 {% endblock %}

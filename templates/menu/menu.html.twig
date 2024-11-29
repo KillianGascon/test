@@ -9,10 +9,10 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ path("app_home") }}">Home</a>
                 </li>
-                {% for dossier in dossiers %}
+                {% for c in categories %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_chatons', {"dossier": dossier.filename }) }}">
-                            {{ dossier.filename }}
+                        <a class="nav-link" href="{{ path('app_chaton_by_categorie', {"id": c.id }) }}">
+                            {{ c.Titre }}
                         </a>
                     </li>
                 {% endfor %}

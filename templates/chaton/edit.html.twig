@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Chaton{% endblock %}
+
+{% block body %}
+    <h1>Edit Chaton</h1>
+
+
+    {{ include('chaton/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('chaton/_delete_form.html.twig') }}
+
+    <a class="btn btn-secondary" href="{{ path('app_home') }}">back to list</a>
+
+
+{% endblock %}

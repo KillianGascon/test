@@ -34,6 +34,19 @@ class CategorieController extends AbstractController
 
     }
 
+//    #[Route('/chaton', name: 'app_voir_chatons')]
+//    public function chatons(CategorieRepository $repo): Response
+//    {
+//        // à l'aide du repository injecte par injection de dépandance
+//        //on va chercher toutes les catégories
+//
+//        $categories = $repo->findAll();
+//        return $this->render('chaton/index.html.twig', [
+//            'categories' => $categories
+//        ]);
+//    }
+
+
     //De quoi ajouter une catégorie
 
     #[Route('/categorie/ajouter', name: 'app_ajouter_categorie')]
